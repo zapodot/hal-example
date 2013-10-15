@@ -32,7 +32,7 @@ class IndexRoute(path: String) extends Route(path) {
   def handle(request: Request, response: Response): AnyRef = {
     import Service._
     representationFactory.newRepresentation(path)
-      .withLink(Paths.usersPath, UserListRoute.representation)
+      .withLink("index", Paths.usersPath)
       .withProperty("service", "User service")
       .withProperty("version", "1.0.0-SNAPSHOT")
       .toString(RepresentationFactory.HAL_JSON)

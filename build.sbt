@@ -4,6 +4,8 @@ organization := "org.zapodot"
 
 version := "1.0.0-SNAPSHOT"
 
+scalaVersion := "2.10.2"
+
 libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.5"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.0.13"

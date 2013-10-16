@@ -1,0 +1,3 @@
+[submodule "src/main/resources/browser"]
+	path = src/main/resources/browser
+	url = https://github.com/mikekelly/hal-browser.git

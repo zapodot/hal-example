@@ -53,8 +53,11 @@ class UserListRoute(path: String) extends Route(path) {
       user => {
         val userId = user.id
         resource.withRepresentation("users", representationFactory.newRepresentation(s"$path/$userId")
+          .withNamespace(Namespaces.user._1, Namespaces.user._2)
+          .withLink(Namespaces.user._1 + ":item",Paths.userItemPath )
           .withProperty("id", user.id)
           .withProperty("name", user.name))
+
       }
     }
     return resource.toString(RepresentationFactory.HAL_JSON)
@@ -65,7 +68,18 @@ object UserListRoute extends UserListRoute(Paths.usersPath) {
   val representation = "users"
 }
 
+object UserItemRoute extends Route(Paths.usersPath) {
+  def handle(request: Request, response: Response): AnyRef = {
+
+  }
+}
+
 object Paths {
   val usersPath = "/users"
+  val userItemPath = "/users/{id}"
+}
+
+object Namespaces {
+  val user = ("user", "http://wiki.nextgentel.net/display/SYS/hal-elements#{rel}")
 }
 

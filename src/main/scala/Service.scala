@@ -14,8 +14,11 @@ object Service extends App {
 
   val userBuffer: mutable.Buffer[User] = ArrayBuffer.apply(new User(1L, "User"))
   val representationFactory = new StandardRepresentationFactory
+  def lookupPort = {
+    sys.env.get("PORT").getOrElse("8080").toInt
+  }
 
-  setPort(8080)
+  setPort(lookupPort)
 
   staticFileLocation("browser")
 

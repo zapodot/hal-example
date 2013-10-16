@@ -1,1 +1,1 @@
-web: sbt runMain Service
+web: target/universal/stage/bin/hal-example

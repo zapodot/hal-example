@@ -14,4 +14,4 @@ libraryDependencies += "com.sparkjava" % "spark-core" % "1.1"
 
 libraryDependencies += "com.theoryinpractise" % "halbuilder-standard" % "3.0.1"
 
-packageArchetype.java_application
+com.typesafe.sbt.SbtNativePackager.packageArchetype.java_application

@@ -15,3 +15,5 @@ libraryDependencies += "com.sparkjava" % "spark-core" % "1.1"
 libraryDependencies += "com.theoryinpractise" % "halbuilder-standard" % "3.0.1"
 
 com.typesafe.sbt.SbtNativePackager.packageArchetype.java_application
+
+net.virtualvoid.sbt.graph.Plugin.graphSettings

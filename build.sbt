@@ -14,6 +14,8 @@ libraryDependencies += "com.sparkjava" % "spark-core" % "1.1"
 
 libraryDependencies += "com.theoryinpractise" % "halbuilder-standard" % "3.0.1"
 
+libraryDependencies += "com.newrelic.agent.java" % "newrelic-api" % "2.21.4"
+
 com.typesafe.sbt.SbtNativePackager.packageArchetype.java_application
 
 net.virtualvoid.sbt.graph.Plugin.graphSettings
